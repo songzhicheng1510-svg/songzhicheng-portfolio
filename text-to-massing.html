@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text to Massing | 宋志诚</title>
+    <meta name="description" content="A human-AI workflow for 3D massing design">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="宋志诚首页">
+        <span>宋志诚</span><small>Research Portfolio</small>
+      </a>
+      <nav class="nav-links" aria-label="主导航"><a class="" href="index.html">首页</a><a class="active" href="projects.html">成果</a><a class="" href="index.html#profile">关于</a><a class="" href="index.html#contact">联系</a></nav>
+      <a class="nav-cta" href="mailto:1284609850@qq.com">联系</a>
+    </header>
+    
+    <main>
+    <section class="case-hero">
+      <div class="case-title">
+        <a class="back-link" href="projects.html">返回成果总览</a>
+        <p class="eyebrow">CAADRIA 2026 论文源文件</p>
+        <h1>Text to Massing</h1>
+        <p>A human-AI workflow for 3D massing design</p>
+      </div>
+      <div class="case-image"><img class="" src="assets/img/text-to-massing-01.webp" width="1800" height="866" alt="Text to Massing" loading="lazy"></div>
+    </section>
+
+    <section class="case-meta">
+      <div><span>Role</span><strong>主理人 / 第一作者相关研究</strong></div>
+      <div><span>Status</span><strong>CAADRIA 2026 论文源文件</strong></div>
+      <div><span>Stack</span><strong>GPT-5 Thinking / Rhino Python / JSON 约束</strong></div>
+    </section>
+
+    <section class="section case-content">
+      <article>
+        <p class="eyebrow">Problem</p>
+        <h2>项目问题</h2>
+        <p>早期办公建筑体量设计依赖人工经验和反复调整，自然语言任务书很难稳定转译为可复现、可审计的几何生成过程。</p>
+      </article>
+      <article>
+        <p class="eyebrow">Workflow</p>
+        <h2>方法流程</h2>
+        <ol><li>将任务书、规范和设计策略拆解为 Objectives、Constraints、Priorities、Examples、Inspection 五类 Prompt Pack。</li><li>用 GPT-5 Thinking 生成 Rhino Python 代码，并通过 corridor-first 组织、功能块合并、指标监测和错误修复推进迭代。</li><li>围绕 25 个办公建筑体量场景评估 Merge Rate、Programme Ratio Deviation 与直接基线模型差异。</li></ol>
+      </article>
+      <article>
+        <p class="eyebrow">Outcome</p>
+        <h2>成果价值</h2>
+        <p>形成从自然语言 brief 到可运行体量脚本的 Human-AI Workflow，并把设计知识外化为可检查、可复用的结构化规则。</p>
+        <div class="tag-row large"><span>GPT-5 Thinking</span><span>Rhino Python</span><span>JSON 约束</span><span>参数化体量</span><span>规则校验</span></div>
+      </article>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-heading">
+        <p class="eyebrow">Gallery</p>
+        <h2>成果图与流程图</h2>
+      </div>
+      <div class="gallery-grid"><figure><img class="" src="assets/img/text-to-massing-01.webp" width="1800" height="866" alt="Text to Massing" loading="lazy"><figcaption>Text to Massing</figcaption></figure><figure><img class="" src="assets/img/text-to-massing-02.webp" width="1238" height="1200" alt="Text to Massing" loading="lazy"><figcaption>Text to Massing</figcaption></figure><figure><img class="" src="assets/img/text-to-massing-03.webp" width="1600" height="1064" alt="Text to Massing" loading="lazy"><figcaption>Text to Massing</figcaption></figure><figure><img class="" src="assets/img/legacy-portfolio_09.webp" width="1800" height="866" alt="Text to Massing" loading="lazy"><figcaption>Text to Massing</figcaption></figure></div>
+    </section>
+    </main>
+    
+    <footer class="site-footer" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>欢迎交流 AI 设计工具、AIGC 空间可视化与建筑工作流产品化。</h2>
+      </div>
+      <div class="footer-actions">
+        <a href="mailto:1284609850@qq.com">1284609850@qq.com</a>
+        <a href="projects.html">查看全部成果</a>
+      </div>
+    </footer>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
