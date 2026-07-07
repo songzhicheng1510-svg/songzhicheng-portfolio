@@ -146,33 +146,6 @@
       <p>Early-stage office massing design often depends on tacit heuristics and repeated manual refinement. This research externalizes design knowledge into prompt packs, executable Rhino Python scripts, and measurable evaluation criteria, so LLM-assisted massing can be inspected, repeated, and compared across scenarios.</p>
     </section>
 
-    <section class="section rag-section" id="ask-portfolio" aria-labelledby="rag-title">
-      <div class="rag-panel">
-        <div class="rag-intro">
-          <p class="eyebrow">RAG Assistant</p>
-          <h2 id="rag-title">Ask My Portfolio</h2>
-          <p>可询问研究方向、Text to Massing、EditPanorama、Voice-Aided Rhino Modeling、AIGC 工作流、产品原型经历。</p>
-        </div>
-        <div class="rag-console" aria-label="作品集问答入口">
-          <div class="rag-prompts" aria-label="快捷问题">
-            <button type="button" class="rag-prompt" data-rag-question="Text to Massing 项目是什么？">Text to Massing 项目是什么？</button>
-            <button type="button" class="rag-prompt" data-rag-question="我的研究方向适合什么岗位？">我的研究方向适合什么岗位？</button>
-            <button type="button" class="rag-prompt" data-rag-question="Voice-Aided Rhino Modeling 如何使用 RAG？">Voice-Aided Rhino Modeling 如何使用 RAG？</button>
-          </div>
-          <form class="rag-form" id="rag-form">
-            <label class="sr-only" for="rag-question">输入你想询问作品集的问题</label>
-            <textarea id="rag-question" name="message" rows="4" placeholder="例如：请总结宋志诚的 AI 建筑研究方向，以及适合投递哪些产品或研究岗位。"></textarea>
-            <div class="rag-actions">
-              <span class="rag-hint">支持 Ctrl + Enter 提交</span>
-              <button type="submit" class="button primary" id="rag-submit">提问</button>
-            </div>
-          </form>
-          <div class="rag-answer is-empty" id="rag-answer" role="status" aria-live="polite">
-            <p>回答会显示在这里。你可以先点击一个快捷问题。</p>
-          </div>
-        </div>
-      </div>
-    </section>
     </main>
     <footer class="site-footer" id="contact">
       <div>
@@ -186,6 +159,38 @@
         <a href="projects.html">查看全部成果</a>
       </div>
     </footer>
+    <div class="rag-floating" id="rag-floating">
+      <button class="rag-fab" id="rag-fab" type="button" aria-expanded="false" aria-controls="rag-panel">
+        <span class="rag-fab-dot" aria-hidden="true"></span>
+        <span>Ask</span>
+      </button>
+      <section class="rag-panel" id="rag-panel" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="rag-title">
+        <div class="rag-panel-header">
+          <div>
+            <p class="rag-eyebrow">RAG Assistant</p>
+            <h2 id="rag-title">Ask My Portfolio</h2>
+          </div>
+          <button class="rag-close" id="rag-close" type="button" aria-label="关闭 RAG Assistant">×</button>
+        </div>
+        <p class="rag-desc">可询问研究方向、Text to Massing、EditPanorama、Voice-Aided Rhino Modeling、AIGC 工作流、产品原型经历。</p>
+        <div class="rag-suggestions" aria-label="快捷问题">
+          <button type="button" class="rag-suggestion" data-rag-question="Text to Massing 项目是什么？">Text to Massing 项目是什么？</button>
+          <button type="button" class="rag-suggestion" data-rag-question="我的研究方向适合什么岗位？">我的研究方向适合什么岗位？</button>
+          <button type="button" class="rag-suggestion" data-rag-question="Voice-Aided Rhino Modeling 如何使用 RAG？">Voice-Aided Rhino Modeling 如何使用 RAG？</button>
+        </div>
+        <form class="rag-form" id="rag-form">
+          <label class="sr-only" for="rag-question">输入你想询问作品集的问题</label>
+          <textarea id="rag-question" name="message" rows="4" maxlength="800" placeholder="例如：Text to Massing 项目是什么？"></textarea>
+          <div class="rag-submit-row">
+            <span class="rag-hint">Ctrl + Enter 提交</span>
+            <button type="submit" class="rag-ask-btn" id="rag-ask-btn">提问</button>
+          </div>
+        </form>
+        <div class="rag-answer is-empty" id="rag-answer" role="status" aria-live="polite">
+          <p>点击快捷问题，或输入你想了解的作品集内容。</p>
+        </div>
+      </section>
+    </div>
     <script src="app.js"></script>
     <script src="js/rag.js" defer></script>
   </body>
