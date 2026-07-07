@@ -2,7 +2,7 @@
 
 This folder is a standalone Vercel Serverless Function project for the GitHub Pages portfolio RAG Assistant.
 
-The GitHub Pages frontend must not store or call OpenAI API keys directly. It should call only:
+The GitHub Pages frontend must not store API keys directly. It should call only:
 
 ```txt
 https://portfolio-rag-api.vercel.app/api/chat
@@ -13,13 +13,19 @@ https://portfolio-rag-api.vercel.app/api/chat
 Configure these variables in the Vercel project settings:
 
 ```bash
-OPENAI_API_KEY=你的 OpenAI API Key
-OPENAI_VECTOR_STORE_ID=你的 Vector Store ID
-OPENAI_MODEL=gpt-4.1-mini
+DASHSCOPE_API_KEY=你的百炼APIKey
+BAILIAN_APP_ID=你的百炼应用APP_ID
+DASHSCOPE_BASE_URL=https://dashscope.aliyuncs.com/api/v1
 ALLOWED_ORIGIN=https://songzhicheng1510-svg.github.io
 ```
 
-`OPENAI_MODEL` is optional. If omitted, the API uses `gpt-4.1-mini`.
+`DASHSCOPE_BASE_URL` defaults to `https://dashscope.aliyuncs.com/api/v1`. This default is for the China mainland edition / Beijing region. If you use the international edition or Singapore region, change `DASHSCOPE_BASE_URL` to the base URL shown in the Bailian console for that region.
+
+If the Bailian application is in the default workspace, only `BAILIAN_APP_ID` is required. If the application is in a sub-workspace, also configure:
+
+```bash
+DASHSCOPE_WORKSPACE_ID=你的子业务空间ID
+```
 
 ## Deploy to Vercel
 
@@ -33,6 +39,12 @@ portfolio-rag-api/
     chat.js
   package.json
   README.md
+```
+
+In the Vercel web dashboard, set **Root Directory** to:
+
+```txt
+portfolio-rag-api
 ```
 
 The route must be available as:
@@ -59,14 +71,23 @@ Expected response:
 }
 ```
 
-## If You Still See `Cannot POST /api/chat`
+If environment variables are missing, the API returns a JSON error such as:
+
+```json
+{
+  "error": "DASHSCOPE_API_KEY is missing."
+}
+```
+
+## If You Still See `Cannot POST /api/chat` or 404
 
 It means the Vercel route is not deployed correctly. Common causes:
 
 - `api/chat.js` is not in the Vercel project root `api` folder.
 - Vercel is deploying a different repository or a different root directory.
-- The project was not redeployed after adding `api/chat.js`.
+- The Vercel Root Directory is not set to `portfolio-rag-api`.
+- The project was not redeployed after adding or changing `api/chat.js`.
 - The domain is not attached to the current Vercel project.
 - The current project is not using the Vercel Serverless Function structure.
 
-After fixing the structure or environment variables, redeploy the Vercel project.
+After fixing the structure, environment variables, or region base URL, redeploy the Vercel project.

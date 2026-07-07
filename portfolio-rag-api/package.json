@@ -2,8 +2,5 @@
   "name": "portfolio-rag-api",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "dependencies": {
-    "openai": "latest"
-  }
+  "type": "module"
 }
