@@ -9,6 +9,7 @@ const ragQuestion = document.querySelector("#rag-question");
 const ragAskBtn = document.querySelector("#rag-ask-btn");
 const ragAnswer = document.querySelector("#rag-answer");
 const ragSuggestionButtons = document.querySelectorAll(".rag-suggestion");
+const ragOpenTriggers = document.querySelectorAll("[data-rag-open]");
 
 class PortfolioRagError extends Error {
   constructor(message) {
@@ -136,6 +137,13 @@ const askPortfolio = async (question) => {
 
 ragFab?.addEventListener("click", () => setPanelOpen(!ragFloating?.classList.contains("is-open")));
 ragClose?.addEventListener("click", () => setPanelOpen(false));
+
+ragOpenTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    setPanelOpen(true);
+  });
+});
 
 ragFloating?.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {

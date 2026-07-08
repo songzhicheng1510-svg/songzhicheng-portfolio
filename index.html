@@ -31,53 +31,104 @@
       <a class="nav-cta" href="mailto:1284609850@qq.com">邮件联系</a>
     </header>
     <main id="main">
-    <section class="hero">
+    <section class="hero linear-hero" aria-labelledby="hero-title">
       <div class="hero-text">
         <p class="eyebrow">AI Architecture / Research / Product Prototypes</p>
-        <h1>宋志诚</h1>
-        <p class="hero-position">把建筑设计问题转化为可测试、可复现、可交流的 AI 工作流。</p>
-        <p class="hero-lede">建筑学背景与 AI 原型能力交叉，关注 Human-AI Workflow、AIGC 空间可视化、Rhino 自动化建模和城市更新智能体系统。</p>
+        <h1 id="hero-title">AI-native architectural design workflow</h1>
+        <p class="hero-position">宋志诚 · 把建筑设计问题转化为可测试、可复现、可交流的 AI 工作流。</p>
+        <p class="hero-lede">建筑学背景与 AI 原型能力交叉，关注 Human-AI Workflow、AIGC 空间可视化、Rhino Python 自动化建模和城市更新智能体系统。</p>
         <div class="hero-actions" aria-label="主要行动">
-          <a class="button primary" href="projects.html">查看精选成果</a>
-          <a class="button secondary" href="mailto:1284609850@qq.com">邮件联系</a>
+          <a class="button primary" href="projects.html">View Projects</a>
+          <a class="button secondary" href="#rag-floating" data-rag-open>Ask Portfolio AI</a>
           <a class="button ghost" href="mailto:1284609850@qq.com">邮件获取简历</a>
         </div>
         <div class="hero-points" aria-label="快速定位">
-          <div><span>Research</span><strong>AI-assisted architectural design workflows</strong></div>
-          <div><span>Prototype</span><strong>LLM, AIGC, Rhino, multimodal agents</strong></div>
-          <div><span>Fit</span><strong>Academic applications, internships, product roles</strong></div>
+          <div><span>6</span><strong>Featured Cases</strong></div>
+          <div><span>3</span><strong>Research Directions</strong></div>
+          <div><span>AI x Architecture</span><strong>Workflow, paper, prototype</strong></div>
         </div>
       </div>
-      <div class="hero-visual">
-        <img class="" src="assets/img/image-analysis-01.webp" width="1800" height="1013" alt="AI-Assisted Architectural Image Analysis &amp; Generation" loading="eager" fetchpriority="high">
-        <p class="image-caption">Selected architectural image generation and analysis work</p>
+
+      <div class="hero-dashboard" aria-label="AI Architecture Workflow Dashboard">
+        <div class="dashboard-shell">
+          <div class="dashboard-topbar">
+            <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <strong>AI Architecture Workflow Dashboard</strong>
+            <span class="status-pill">Research Prototype</span>
+          </div>
+          <div class="dashboard-body">
+            <aside class="dashboard-sidebar" aria-label="工作流模块">
+              <span class="sidebar-label">Pipeline</span>
+              <a href="text-to-massing.html">Text to Massing</a>
+              <a href="editpanorama.html">EditPanorama</a>
+              <a href="voice-rhino.html">Voice Rhino</a>
+              <a href="#rag-floating" data-rag-open>RAG Assistant</a>
+            </aside>
+            <div class="dashboard-main">
+              <div class="workflow-nodes" aria-label="AI 建筑工作流">
+                <div><span>01</span><strong>Design Brief</strong><small>programme / site / constraints</small></div>
+                <div><span>02</span><strong>Prompt Pack</strong><small>objectives / examples / inspection</small></div>
+                <div><span>03</span><strong>Rhino Python</strong><small>script generation and repair</small></div>
+                <div><span>04</span><strong>Massing Evaluation</strong><small>merge rate / ratio deviation</small></div>
+                <div><span>05</span><strong>Paper Output</strong><small>method, figures, prototype</small></div>
+              </div>
+              <div class="dashboard-insight-grid">
+                <div class="code-card">
+                  <span class="card-label">Generated Script</span>
+                  <pre><code>brief.to_prompt_pack()
+llm.generate("Rhino Python")
+evaluate(massing_output)</code></pre>
+                </div>
+                <div class="visual-card">
+                  <span class="card-label">Selected Output</span>
+                  <img src="assets/img/image-analysis-01.webp" width="1800" height="1013" alt="AI-Assisted Architectural Image Analysis &amp; Generation" loading="eager" fetchpriority="high">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="image-caption">A portfolio interface for research methods, AI workflows, Rhino prototypes, and paper outputs.</p>
       </div>
     </section>
 
-    <section class="section intro-grid" id="profile">
-      <div>
-        <p class="eyebrow">Profile</p>
-        <h2>建筑学背景 + AI 产品化原型能力</h2>
-      </div>
-      <div class="intro-copy">
+    <section class="section system-overview" id="profile">
+      <div class="section-heading centered">
+        <div>
+          <p class="eyebrow">System Overview</p>
+          <h2>建筑学背景 + AI 产品化原型能力</h2>
+        </div>
         <p>我的研究和作品围绕建筑师与设计团队在早期方案、空间更新、建模自动化和客户沟通中的真实需求展开：如何把自然语言、图像、视频、规则参数和反馈日志转化为可编辑的模型与可解释的工作流。</p>
-        <p>网站内容来自论文源文件、成果 PPT 与协作项目素材。公开版本只保留成果展示和邮箱联系，不公开手机号、完整简历 PDF 或原始论文/演示文件。</p>
       </div>
+      <div class="capability-grid" aria-label="作品集能力结构">
+        <article class="capability-card">
+          <span class="capability-icon" aria-hidden="true"></span>
+          <p class="card-kicker"><span>01</span><strong>Architectural Research</strong></p>
+          <h3>Research Depth</h3>
+          <p>用问题、方法、实验指标和论文状态组织案例，而不是只展示效果图。</p>
+        </article>
+        <article class="capability-card">
+          <span class="capability-icon diagonal" aria-hidden="true"></span>
+          <p class="card-kicker"><span>02</span><strong>AI Workflow Design</strong></p>
+          <h3>Workflow Logic</h3>
+          <p>把自然语言、图像、视频、规则参数和反馈日志转化为可编辑的模型与可解释工作流。</p>
+        </article>
+        <article class="capability-card">
+          <span class="capability-icon grid-mark" aria-hidden="true"></span>
+          <p class="card-kicker"><span>03</span><strong>Rhino / Python Prototyping</strong></p>
+          <h3>Architecture Native</h3>
+          <p>保持建筑研究语境，围绕体量、空间更新、建模和城市微空间展开。</p>
+        </article>
+        <article class="capability-card">
+          <span class="capability-icon dot-mark" aria-hidden="true"></span>
+          <p class="card-kicker"><span>04</span><strong>Product Thinking</strong></p>
+          <h3>Prototype Delivery</h3>
+          <p>强调用户场景、交互链路、输入输出规则和可交付的 AI 原型。</p>
+        </article>
+      </div>
+      <p class="privacy-note">网站内容来自论文源文件、成果 PPT 与协作项目素材。公开版本只保留成果展示和邮箱联系，不公开手机号、完整简历 PDF 或原始论文/演示文件。</p>
     </section>
 
-    <section class="section focus-strip" aria-label="作品集定位">
-      <div><span>01</span><h2>Research Depth</h2><p>用问题、方法、实验指标和论文状态组织案例，而不是只展示效果图。</p></div>
-      <div><span>02</span><h2>Product Thinking</h2><p>强调用户场景、交互链路、输入输出规则和可交付的 AI 原型。</p></div>
-      <div><span>03</span><h2>Architecture Native</h2><p>保持建筑研究语境，围绕体量、空间更新、建模和城市微空间展开。</p></div>
-    </section>
-
-    <section class="section metrics">
-      <div><strong>6</strong><span>深度成果案例</span></div>
-      <div><strong>3</strong><span>研究 / 产品 / 可视化主线</span></div>
-      <div><strong>AI x Architecture</strong><span>论文、原型与空间表达交叉</span></div>
-    </section>
-
-    <section class="section">
+    <section class="section featured-work">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Featured Work</p>
@@ -137,20 +188,36 @@
       </div>
     </section>
 
-    <section class="section paper-highlight">
-      <div>
+    <section class="section paper-highlight research-paper">
+      <div class="paper-copy">
         <p class="eyebrow">Current Paper</p>
         <h2>Text to Massing: A human-AI workflow for 3D massing design</h2>
         <p>Architectural design brief into reproducible code for office massing generation</p>
+        <div class="paper-tags" aria-label="论文标签">
+          <span>Contribution: Method framework</span>
+          <span>Method: Prompt Pack + Rhino Python</span>
+          <span>Status: CAADRIA 2026 source</span>
+        </div>
       </div>
-      <p>Early-stage office massing design often depends on tacit heuristics and repeated manual refinement. This research externalizes design knowledge into prompt packs, executable Rhino Python scripts, and measurable evaluation criteria, so LLM-assisted massing can be inspected, repeated, and compared across scenarios.</p>
+      <div class="paper-method">
+        <p>Early-stage office massing design often depends on tacit heuristics and repeated manual refinement. This research externalizes design knowledge into prompt packs, executable Rhino Python scripts, and measurable evaluation criteria, so LLM-assisted massing can be inspected, repeated, and compared across scenarios.</p>
+        <div class="method-pipeline" aria-label="论文方法流程">
+          <span>Design Brief</span>
+          <span>LLM Prompting</span>
+          <span>Rhino Script</span>
+          <span>Massing Output</span>
+          <span>Evaluation</span>
+          <span>Paper</span>
+        </div>
+      </div>
     </section>
 
     </main>
-    <footer class="site-footer" id="contact">
+    <footer class="site-footer closing-cta" id="contact">
       <div>
         <p class="eyebrow">Contact</p>
-        <h2>欢迎交流 AI 设计工具、AIGC 空间可视化、Rhino 自动化与建筑工作流产品化。</h2>
+        <h2>Interested in AI-native architectural workflows?</h2>
+        <p class="footer-intro">欢迎交流 AI 设计工具、AIGC 空间可视化、Rhino 自动化与建筑工作流产品化。</p>
         <p class="footer-note">公开版本保留成果展示与邮箱联系；完整简历和更多研究材料可通过邮件进一步沟通。</p>
       </div>
       <div class="footer-actions">
